@@ -3,7 +3,7 @@
     <div class="about-container">
       
       <div class="about-image">
-        <img :src="'/images/sikandar.jpg'" alt="Eng. Sekandar Mohibzada" />
+        <img :src="'/images/sikandar.jpeg'" alt="Eng. Sekandar Mohibzada" />
       </div>
 
       <div class="about-content">
