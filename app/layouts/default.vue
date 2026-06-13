@@ -5,6 +5,7 @@
         <div class="logo">
           <NuxtLink to="/">S. Mohibzada</NuxtLink>
         </div>
+        
         <nav class="nav-tabs">
           <NuxtLink to="/" class="nav-link">Home</NuxtLink>
           <NuxtLink to="/about" class="nav-link">About</NuxtLink>
@@ -13,21 +14,13 @@
       </div>
     </header>
 
-    <main class="page-content">
-      <NuxtPage />
+    <main>
+      <slot />
     </main>
   </div>
 </template>
 
-<style>
-/* Global Styles to reset margins and fix typography */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: system-ui, -apple-system, sans-serif;
-  background-color: #ffffff;
-}
-
+<style scoped>
 .main-header {
   background-color: #ffffff;
   border-bottom: 1px solid #f0f0f0;
@@ -38,10 +31,10 @@ body {
 }
 
 .header-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between; /* This forces the navigation tabs to the top right */
+  justify-content: space-between; /* This pushes logo left and nav tabs right */
   align-items: center;
 }
 
@@ -54,7 +47,7 @@ body {
 
 .nav-tabs {
   display: flex;
-  gap: 2rem;
+  gap: 2rem; /* Spacing between your tabs */
 }
 
 .nav-link {
@@ -63,14 +56,11 @@ body {
   font-weight: 500;
   font-size: 1rem;
   transition: color 0.2s ease;
+  padding: 0.5rem 0;
 }
 
 .nav-link:hover,
 .router-link-active {
-  color: #0070f3;
-}
-
-.page-content {
-  min-height: 80vh;
+  color: #0070f3; /* Professional blue accent tint */
 }
 </style>
