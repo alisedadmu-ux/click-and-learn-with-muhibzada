@@ -70,12 +70,36 @@ const YOUTUBE_CHANNEL_ID = 'UCiskzzqhqQ_pyw91CYZt8ow' // e.g., UCxxxxxxxxxxxxxxx
 const categories = ['All Uploads', 'Word', 'Excel', 'Shorts', 'Windows']
 const activeCategory = ref('All Uploads')
 const searchQuery = ref('')
+const pending = ref(true)
+const error = ref(false)
+const rawVideos = ref({ items: [] })
 
-// Build the request URL directly in the frontend
-const apiFetchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${YOUTUBE_CHANNEL_ID}&maxResults=20&order=date&type=video&key=${YOUTUBE_API_KEY}`
+async function loadYouTubeVideos() {
+  try {
+    let pageToken = ''
+    const allItems = []
 
-// Fetch live videos from Google directly onto the client viewport
-const { data: rawVideos, pending, error } = await useFetch(apiFetchUrl)
+    do {
+      const apiFetchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${YOUTUBE_CHANNEL_ID}&maxResults=50&order=date&type=video&key=${YOUTUBE_API_KEY}${pageToken ? `&pageToken=${pageToken}` : ''}`
+      const response = await $fetch(apiFetchUrl)
+
+      if (response?.items) {
+        allItems.push(...response.items)
+      }
+
+      pageToken = response?.nextPageToken || ''
+    } while (pageToken)
+
+    rawVideos.value.items = allItems
+  } catch (err) {
+    console.error('YouTube fetch error', err)
+    error.value = true
+  } finally {
+    pending.value = false
+  }
+}
+
+await loadYouTubeVideos()
 
 // Process YouTube API Data structures into layout properties
 const videos = computed(() => {
