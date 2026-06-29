@@ -11,7 +11,10 @@ export default async (event: H3Event) => {
 
   const config = useRuntimeConfig()
   const supabaseUrl = config.public.supabaseUrl || process.env.NUXT_PUBLIC_SUPABASE_URL
-  const serviceRoleKey = config.supabaseServiceRoleKey || process.env.SUPABASE_SERVICE_ROLE_KEY
+  const serviceRoleKey =
+    config.supabaseServiceRoleKey ||
+    process.env.NUXT_SUPABASE_SERVICE_ROLE_KEY ||
+    process.env.SUPABASE_SERVICE_ROLE_KEY
 
   if (!supabaseUrl || !serviceRoleKey) {
     return createError({ statusCode: 500, statusMessage: 'Supabase server configuration is missing.' })

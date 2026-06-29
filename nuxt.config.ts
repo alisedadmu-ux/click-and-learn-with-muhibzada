@@ -13,7 +13,7 @@ export default defineNuxtConfig({
       supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL || 'https://bmmdnwrzgkzzgxseenpx.supabase.co',
       supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY || 'sb_publishable_FEJ5u78FedHncLID8_iZWQ_rNrTvv0K'
     },
-    supabaseServiceRoleKey: process.env.SUPABASE_SERVICE_ROLE_KEY || ''
+    supabaseServiceRoleKey: process.env.NUXT_SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY || ''
   },
 
   // Connects your Tailwind global styles file cleanly
