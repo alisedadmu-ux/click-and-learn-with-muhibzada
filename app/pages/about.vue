@@ -3,18 +3,18 @@
     <div class="about-container">
       
       <div class="about-image">
-        <img :src="'/images/sikandar.jpeg'" alt="Eng. Sekandar Mohibzada" />
+        <img :src="'/images/sikandar.jpeg'" alt="Eng. Sikandar Muhibzada" />
       </div>
 
       <div class="about-content">
         <h1>انجنیر سکندر محب‌زاده</h1>
-        <h2>Eng. Sekandar Mohibzada</h2>
+        <h2>Eng. Sikandar Muhibzada</h2>
         <p class="subtitle">Accomplished IT Professional & Tech Leader</p>
         
         <hr class="divider" />
 
         <p class="bio-text">
-          Eng. Sekandar Mohibzada is an accomplished IT professional with over 15 years 
+          Eng. Sikandar Muhibzada is an accomplished IT professional with over 15 years 
           of experience across various domains of information technology. He holds 
           certifications from both Oracle and Microsoft, demonstrating his strong 
           technical expertise and commitment to professional excellence. Eng. Mohibzada 

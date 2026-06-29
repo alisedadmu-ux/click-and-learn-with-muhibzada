@@ -22,20 +22,26 @@
         <form @submit.prevent="handleSubmit" class="contact-form">
           <div class="form-group">
             <label for="name">Your Name</label>
-            <input type="text" id="name" required placeholder="John Doe" />
+            <input v-model="name" type="text" id="name" required placeholder="John Doe" />
           </div>
 
           <div class="form-group">
             <label for="email">Your Email</label>
-            <input type="email" id="email" required placeholder="john@example.com" />
+            <input v-model="email" type="email" id="email" required placeholder="john@example.com" />
           </div>
 
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" rows="5" required placeholder="Type your message here..."></textarea>
+            <textarea v-model="message" id="message" rows="5" required placeholder="Type your message here..."></textarea>
           </div>
 
-          <button type="submit" class="submit-btn">Send Message</button>
+          <button :disabled="loading" type="submit" class="submit-btn">
+            {{ loading ? 'Sending...' : 'Send Message' }}
+          </button>
+
+          <div v-if="statusMessage" :class="['status-message', statusType]">
+            {{ statusMessage }}
+          </div>
         </form>
       </div>
 
@@ -44,8 +50,48 @@
 </template>
 
 <script setup>
-const handleSubmit = () => {
-  alert('Thank you for reaching out! This form is ready to be connected to your message handler.')
+import { ref } from 'vue'
+
+const name = ref('')
+const email = ref('')
+const message = ref('')
+const loading = ref(false)
+const statusMessage = ref('')
+const statusType = ref('success')
+
+const handleSubmit = async () => {
+  if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+    statusType.value = 'error'
+    statusMessage.value = 'Please fill in all fields before sending your message.'
+    return
+  }
+
+  loading.value = true
+  statusMessage.value = ''
+
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: {
+        name: name.value.trim(),
+        email: email.value.trim(),
+        message: message.value.trim()
+      }
+    })
+
+    statusType.value = 'success'
+    statusMessage.value = 'Your message was sent successfully. Thank you!'
+    name.value = ''
+    email.value = ''
+    message.value = ''
+  } catch (err) {
+    statusType.value = 'error'
+    const messageText = err?.data?.message || err?.message || 'There was a problem sending your message. Please try again.'
+    statusMessage.value = messageText
+    console.error('Contact form error:', err)
+  } finally {
+    loading.value = false
+  }
 }
 </script>
 
@@ -142,5 +188,21 @@ const handleSubmit = () => {
 }
 .submit-btn:active {
   transform: scale(0.98);
+}
+.status-message {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+.status-message.success {
+  background: #e6fffa;
+  color: #065f46;
+  border: 1px solid #9ae6b4;
+}
+.status-message.error {
+  background: #ffe6e6;
+  color: #9b2c2c;
+  border: 1px solid #fca5a5;
 }
 </style>
