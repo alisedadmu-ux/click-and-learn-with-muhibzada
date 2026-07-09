@@ -13,7 +13,7 @@
           <div class="gradient-border-animated relative rounded-3xl h-full">
             <div class="relative rounded-3xl glass-strong overflow-hidden h-full">
               <div class="aspect-[4/5] h-full">
-                <img src="/images/sikandar.jpeg" alt="Eng. Sekandar Mohibzada" class="w-full h-full object-cover" loading="lazy" />
+                <img src="/images/sikandar.jpeg" alt="Eng. Sikandar Muhibzada" class="w-full h-full object-cover" loading="lazy" />
                 <div class="absolute inset-0 bg-gradient-to-t from-surface-950/80 via-transparent to-transparent" />
               </div>
             </div>
@@ -23,8 +23,8 @@
         <div class="lg:col-span-3 space-y-6">
           <div class="reveal card-surface">
             <h2 class="font-display text-2xl font-semibold text-white mb-3">انجنیر سکندر محب‌زادہ</h2>
-            <h3 class="text-accent font-medium mb-5">Eng. Sekandar Mohibzada</h3>
-            <p class="text-surface-300 leading-relaxed mb-6">Eng. Sekandar Mohibzada is an accomplished IT professional with over 15 years of experience across various domains of information technology. He holds certifications from both Oracle and Microsoft, demonstrating his strong technical expertise and commitment to professional excellence. Eng. Mohibzada earned his Bachelor&#039;s degree in Computer Science, further solidifying his foundation in software, systems, and network technologies.</p>
+            <h3 class="text-accent font-medium mb-5">Eng. Sikandar Muhibzada</h3>
+            <p class="text-surface-300 leading-relaxed mb-6">Eng. Sikandar Muhibzada is an accomplished IT professional with over 15 years of experience across various domains of information technology. He holds certifications from both Oracle and Microsoft, demonstrating his strong technical expertise and commitment to professional excellence. Eng. Muhibzada earned his Bachelor&#039;s degree in Computer Science, further solidifying his foundation in software, systems, and network technologies.</p>
             <div class="flex flex-wrap gap-2">
               <span v-for="badge in badges" :key="badge" class="chip">{{ badge }}</span>
             </div>
@@ -73,7 +73,7 @@
 <script setup lang="ts">
 useHead({
   title: 'About',
-  meta: [{ name: 'description', content: 'Learn about Eng. Sekandar Mohibzada — over 15 years of experience across information technology, Oracle & Microsoft certified, and driven by a deep belief that technology should be approachable for everyone.' }]
+  meta: [{ name: 'description', content: 'Learn about Eng. Sikandar Muhibzada — over 15 years of experience across information technology, Oracle & Microsoft certified, and driven by a deep belief that technology should be approachable for everyone.' }]
 })
 
 useScrollReveal()

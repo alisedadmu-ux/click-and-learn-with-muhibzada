@@ -8,8 +8,8 @@
             <span class="text-white text-sm font-bold">SM</span>
           </div>
           <div>
-            <p class="font-medium text-white font-display">Sekandar Mohibzada</p>
-            <p class="text-surface-500 text-xs">Eng. Sekandar Mohibzada is an accomplished IT professional with over 15 years of experience across various domains of information technology. Oracle &amp; Microsoft certified with a Bachelor&#039;s in Computer Science, committed to making technology approachable for everyone.</p>
+            <p class="font-medium text-white font-display">Sikandar Muhibzada</p>
+            <p class="text-surface-500 text-xs">Eng. Sikandar Muhibzada is an accomplished IT professional with over 15 years of experience across various domains of information technology. Oracle &amp; Microsoft certified with a Bachelor&#039;s in Computer Science, committed to making technology approachable for everyone.</p>
           </div>
         </div>
         <div class="flex items-center gap-3">
@@ -20,7 +20,7 @@
       </div>
       <div class="divider-line my-8" />
       <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-surface-500 text-xs font-mono">
-        <p>&copy; {{ currentYear }} Sekandar Mohibzada. All rights reserved.</p>
+        <p>&copy; {{ currentYear }} Sikandar Muhibzada. All rights reserved.</p>
         <p>Designed &amp; built with Nuxt · Tailwind · ❤️</p>
       </div>
     </div>

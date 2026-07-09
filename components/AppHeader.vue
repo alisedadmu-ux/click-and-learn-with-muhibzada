@@ -7,7 +7,7 @@
       <div class="flex items-center justify-between h-16 sm:h-20">
         <NuxtLink to="/" class="flex items-center gap-2 group">
           <div class="w-8 h-8 rounded-xl bg-accent flex items-center justify-center text-white text-sm font-bold group-hover:shadow-glow-sm transition-all duration-300">SM</div>
-          <span class="font-display font-semibold text-sm text-white hidden sm:block">Sekandar<span class="text-accent">.</span>Mohibzada</span>
+          <span class="font-display font-semibold text-sm text-white hidden sm:block">Sikandar<span class="text-accent">.</span>Muhibzada</span>
         </NuxtLink>
         <nav class="hidden md:flex items-center gap-1">
           <NuxtLink v-for="link in navLinks" :key="link.path" :to="link.path"

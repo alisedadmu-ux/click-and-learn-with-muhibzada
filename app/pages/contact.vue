@@ -102,7 +102,7 @@ import { ref } from 'vue'
 
 useHead({
   title: 'Contact',
-  meta: [{ name: 'description', content: 'Get in touch with Eng. Sekandar Mohibzada for technical questions, project discussions, or collaboration.' }]
+  meta: [{ name: 'description', content: 'Get in touch with Eng. Sikandar Muhibzada for technical questions, project discussions, or collaboration.' }]
 })
 
 useScrollReveal()

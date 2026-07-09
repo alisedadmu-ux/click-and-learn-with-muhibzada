@@ -21,13 +21,13 @@
           </div>
 
           <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight text-balance">
-            Eng. Sekandar<br />
-            <span class="gradient-text">Mohibzada</span>
+            Eng. Sikandar<br />
+            <span class="gradient-text">Muhibzada</span>
           </h1>
 
 <p class="text-lg sm:text-xl text-surface-400 max-w-xl leading-relaxed text-balance">
             I help people master technology — from essential workplace skills to the
-            tools that power their day. As Eng. Sekandar Mohibzada, I bring over 15 years of IT expertise and free, friendly education to learners everywhere.
+            tools that power their day. As Eng. Sikandar Muhibzada, I bring over 15 years of IT expertise and free, friendly education to learners everywhere.
           </p>
 
           <div class="flex flex-wrap gap-4">
@@ -55,10 +55,10 @@
             <div class="gradient-border-animated relative rounded-[2rem]">
               <div class="relative rounded-[2rem] glass-strong p-3 shadow-glass">
                 <div class="relative aspect-square rounded-3xl overflow-hidden bg-surface-900">
-                  <img src="/images/sikandar.jpeg" alt="Eng. Sekandar Mohibzada" class="w-full h-full object-cover" loading="eager" />
+                  <img src="/images/sikandar.jpeg" alt="Eng. Sikandar Muhibzada" class="w-full h-full object-cover" loading="eager" />
                   <div class="absolute inset-0 bg-gradient-to-t from-surface-950/70 via-transparent to-transparent" />
                   <div class="absolute bottom-0 left-0 right-0 p-6">
-                    <p class="font-display text-xl font-semibold text-white">Sekandar Mohibzada</p>
+                    <p class="font-display text-xl font-semibold text-white">Sikandar Muhibzada</p>
                     <p class="text-accent-200 text-sm font-medium">IT Professional & Educator</p>
                     <p class="mt-2 flex items-center gap-1.5 text-xs text-surface-300">
                       <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243A8 8 0 1117.657 16.657z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
@@ -203,7 +203,7 @@
           <div class="lg:col-span-2 reveal">
             <div class="card-surface h-full flex flex-col">
               <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-surface-900 mb-6">
-                <img src="/images/sikandar.jpeg" alt="Eng. Sekandar Mohibzada" class="w-full h-full object-cover" loading="lazy" />
+                <img src="/images/sikandar.jpeg" alt="Eng. Sikandar Muhibzada" class="w-full h-full object-cover" loading="lazy" />
               </div>
               <div class="flex flex-wrap gap-2 mt-auto">
                 <span v-for="badge in badges" :key="badge" class="chip">{{ badge }}</span>
@@ -214,7 +214,7 @@
           <div class="lg:col-span-3 space-y-6">
             <div class="reveal card-surface">
               <h3 class="font-display text-2xl font-semibold text-white mb-3">انجنیر سکندر محب‌زادہ</h3>
-              <p class="text-surface-300 leading-relaxed">Eng. Sekandar Mohibzada is an accomplished IT professional with over 15 years of experience across various domains of information technology. He holds certifications from both Oracle and Microsoft, demonstrating his strong technical expertise and commitment to professional excellence. Eng. Mohibzada earned his Bachelor&#039;s degree in Computer Science, further solidifying his foundation in software, systems, and network technologies.</p>
+              <p class="text-surface-300 leading-relaxed">Eng. Sikandar Muhibzada is an accomplished IT professional with over 15 years of experience across various domains of information technology. He holds certifications from both Oracle and Microsoft, demonstrating his strong technical expertise and commitment to professional excellence. Eng. Muhibzada earned his Bachelor&#039;s degree in Computer Science, further solidifying his foundation in software, systems, and network technologies.</p>
             </div>
             <div class="grid grid-cols-3 gap-4">
               <div v-for="h in highlights" :key="h.label" class="reveal card-surface text-center !p-5">
@@ -276,9 +276,9 @@
 import { ref } from 'vue'
 
 useHead({
-  title: 'Sekandar Mohibzada — Portfolio',
+  title: 'Sikandar Muhibzada — Portfolio',
   meta: [
-    { name: 'description', content: 'Portfolio of Eng. Sekandar Mohibzada — over 15 years of professional IT expertise, Oracle &amp; Microsoft certified, and a Computer Science graduate dedicated to sharing knowledge through free education.' }
+    { name: 'description', content: 'Portfolio of Eng. Sikandar Muhibzada — over 15 years of professional IT expertise, Oracle &amp; Microsoft certified, and a Computer Science graduate dedicated to sharing knowledge through free education.' }
   ]
 })
 
