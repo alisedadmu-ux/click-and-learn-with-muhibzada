@@ -1,66 +1,35 @@
 <template>
-  <div>
-    <header class="main-header">
-      <div class="header-container">
-        <div class="logo">
-          <NuxtLink to="/">S. Muhibzada</NuxtLink>
-        </div>
-        
-        <nav class="nav-tabs">
-          <NuxtLink to="/" class="nav-link">Home</NuxtLink>
-          <NuxtLink to="/about" class="nav-link">About</NuxtLink>
-          <NuxtLink to="/contact" class="nav-link">Get In Touch</NuxtLink>
-        </nav>
-      </div>
-    </header>
-
-    <main>
+  <div class="relative min-h-screen bg-surface-950 text-white">
+    <FloatingOrbs />
+    <AnimatedGrid />
+    <div class="noise-bg" />
+    
+    <AppHeader />
+    
+    <main class="relative z-10 pt-20">
       <slot />
     </main>
+
+    <AppFooter />
   </div>
 </template>
 
-<style scoped>
-.main-header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #f0f0f0;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+<script setup lang="ts">
+useHead({
+  titleTemplate: "%s | Sekandar Mohibzada",
+  defaultTitle: "Sekandar Mohibzada \u2014 IT Professional",
+  meta: [
+    { name: "description", content: "Portfolio of Eng. Sekandar Mohibzada \u2014 over 15 years of professional IT experience, Oracle & Microsoft Certified, with a Bachelor's in Computer Science." },
+    { name: "keywords", content: "Sekandar Mohibzada, portfolio, IT professional, Oracle, Microsoft, computer science, full-stack" },
+    { property: "og:title", content: "Sekandar Mohibzada \u2014 IT Professional" },
+    { property: "og:description", content: "Portfolio of Eng. Sekandar Mohibzada \u2014 over 15 years of professional IT experience, Oracle & Microsoft Certified, with a Bachelor's in Computer Science." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" }
+  ],
+  link: [
+    { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+  ]
+})
 
-.header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between; /* This pushes logo left and nav tabs right */
-  align-items: center;
-}
-
-.logo a {
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: #111111;
-  text-decoration: none;
-}
-
-.nav-tabs {
-  display: flex;
-  gap: 2rem; /* Spacing between your tabs */
-}
-
-.nav-link {
-  text-decoration: none;
-  color: #555555;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.2s ease;
-  padding: 0.5rem 0;
-}
-
-.nav-link:hover,
-.router-link-active {
-  color: #0070f3; /* Professional blue accent tint */
-}
-</style>
+useScrollReveal()
+</script>
